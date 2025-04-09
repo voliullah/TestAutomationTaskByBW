@@ -19,10 +19,11 @@ Each test case is implemented with reusable test objects using Katalon’s Objec
 ## How to Run the Tests
 
 1. Open Katalon Studio  
-2. In the Test Suites folder, open the suite collection named All Scenarios in Parallel  
-3. Set Execution Mode to Parallel  
-4. Select Chrome as the browser  
-5. Click the Execute button (the blue play button in the toolbar)
+2. In the Test Suites folder, open the suite collection named 'All Scen
+3. arios in Parallel'  
+4. Set Execution Mode to Parallel  
+5. Select Chrome as the browser  
+6. Click the Execute button (the blue play button in the toolbar)
 
 Each scenario will run in parallel in its own browser instance.
 
@@ -30,5 +31,6 @@ Each scenario will run in parallel in its own browser instance.
 
 - The tests are independent and do not rely on shared state.  
 - After execution, results and logs can be found in the Reports folder.
+- An HTML Report of the execution could be found at 'https://github.com/voliullah/TestAutomationTaskByBW/blob/main/Html_Report/index.html'
 
 
