@@ -31,3 +31,6 @@ Each scenario will run in parallel in its own browser instance.
 - The tests are independent and do not rely on shared state.  
 - After execution, results and logs can be found in the Reports folder.
 - Screenshots of the report are being taken after each test
+
+📊 [View Test Execution Report](./Html_Report/Report.html)
+
