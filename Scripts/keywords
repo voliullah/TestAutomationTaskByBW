@@ -1,1 +1,45 @@
+import com.kms.katalon.core.annotation.Keyword
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import internal.GlobalVariable
+
+public class Login {
+
+	@Keyword
+	def loginRole(String userRole) {
+		String username = ""
+		String password = ""
+		String loginURL = GlobalVariable.loginURL
+
+		switch (userRole.toLowerCase()) {
+			case "admin":
+				username = GlobalVariable.adminUsername
+				password = GlobalVariable.adminPassword
+				break
+			//
+
+			case "manager":
+				username = GlobalVariable.managerUsername
+				password = GlobalVariable.managerPassword
+				break
+
+			case "user":
+				username = GlobalVariable.userUsername
+				password = GlobalVariable.userPassword
+				break
+
+			default:
+				throw new IllegalArgumentException("Invalid user role: " + userRole)
+		}
+
+		WebUI.openBrowser('')
+		WebUI.navigateToUrl(loginURL)
+
+		WebUI.setText(findTestObject('Object Repository/LoginPage/input_Email'), username)
+		WebUI.setEncryptedText(findTestObject('Object Repository/LoginPage/InputPassword'), password)
+		WebUI.click(findTestObject('Object Repository/LoginPage/LoginButton'))
+
+		WebUI.waitForPageLoad(10)
+	}
+}
 
